@@ -5,7 +5,7 @@ const EditorContext = createContext();
 const EditorProvider = ({ children }) => {
     const [html, setHtml] = useState('')
     const [css, setCss] = useState('')
-    const [js, setJS] = useState('')
+    const [js, setJs] = useState('')
 
     const values = {
         html, css, js, setHtml, setCss, setJs

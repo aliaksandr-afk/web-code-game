@@ -1,22 +1,28 @@
-import React from "react"
+import React, {useState} from "react"
 import styles from "./CodeBar.module.css"
 
 const Codebar = () => {
+
+    const [activeTab, setActiveTab] = useState('html')
+
     return (
         <div className={styles.codebar}>
             <nav className={styles.tab}>
                 <button
-                    className={styles.item}
+                    onClick={() => setActiveTab('html')}
+                    className={`${styles.item} ${activeTab === 'html' ? styles.activeTab : ''}`}
                 >
                     HTML
                 </button>
                 <button
-                    className={styles.item}
+                    onClick={() => setActiveTab('css')}
+                    className={`${styles.item} ${activeTab === 'css' ? styles.activeTab : ''}`}
                 >
                     CSS
                 </button>
                 <button
-                    className={styles.item}
+                    onClick={() => setActiveTab('js')}
+                    className={`${styles.item} ${activeTab === 'js' ? styles.activeTab : ''}`}
                 >
                     JS
                 </button>
