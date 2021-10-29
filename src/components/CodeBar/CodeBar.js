@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import HtmlEditor from "../Editor/HtmlEditor"
 import styles from "./CodeBar.module.css"
 
 const Codebar = () => {
@@ -27,6 +28,12 @@ const Codebar = () => {
                     JS
                 </button>
             </nav>
+
+            <div className={styles.editor}>
+                {activeTab === 'html' ? <HtmlEditor/> : null}
+                {activeTab === 'css' ? <div>CSS</div> : null}
+                {activeTab === 'js' ? <div>JS</div> : null}
+            </div>
 
         </div>
     )
