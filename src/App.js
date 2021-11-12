@@ -18,6 +18,7 @@ function App() {
           
       </EditorProvider>
   );
+  
 }
 
 export default App;
