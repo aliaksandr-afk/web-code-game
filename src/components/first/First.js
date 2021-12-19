@@ -40,7 +40,7 @@ class First extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            count = 0
+            count: 0
         }
         this.upCount = this.upCount.bind(this);
     }
@@ -63,3 +63,5 @@ class First extends Component {
         )
     }
 }
+
+export default First;

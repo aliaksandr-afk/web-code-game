@@ -9,6 +9,8 @@ import Header from './components/Header/Header';
 import Preview from './components/Preview/Preview';
 import First from './components/first/First';
 
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
 function App() {
   return (
     /*<EditorProvider>
@@ -20,7 +22,7 @@ function App() {
         </div>
         
     </EditorProvider>*/
-    <First/>
+    <First />
 
 
   );
