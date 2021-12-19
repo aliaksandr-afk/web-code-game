@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { Router } from 'react-router';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 /* const First = () => {
     return (
@@ -36,32 +36,36 @@ import { Router } from 'react-router';
 
 export default First; */
 
-class First extends Component {
+export default class First extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
-            count: 0
+            name: this.props.name,
+            gender: null,
+            level: null,
+            points: 0
         }
         this.upCount = this.upCount.bind(this);
     }
     upCount() {
-        console.log(this.state)
+        console.log(this.state.points)
         this.setState(state=>({
-            count: ++state.count
+            points: ++state.points
         }))
     }
     render() {
-        const {name, surname, link} = this.props;
-        const {count} = this.state;
+        const {name, gender, level, points} = this.state;
         return (
-            <>
+            <Router>
+               <div className='first-page'>
                 <button onClick={this.upCount}>+</button>
                 <h3>Name: {name}</h3>
-                <h3>Surname: {surname}</h3>
-                <a href={link}>{name} {surname}</a>
-            </>
+                <h3>Level: {level}</h3>
+                <a href='#'>{name}: {points}</a>
+            </div> 
+            </Router>
+            
         )
     }
 }
-
-export default First;

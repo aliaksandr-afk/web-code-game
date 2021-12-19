@@ -22,9 +22,12 @@ function App() {
         </div>
         
     </EditorProvider>*/
-    <First />
-
-
+    <div>
+      <First name="Alex"/>
+      <First name="Gerold"/>
+      <First name="Richard"/>
+    </div>
+    
   );
 
 }
