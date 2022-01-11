@@ -1,6 +1,8 @@
 import React from 'react';
-import { Component } from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { Component, useState } from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Page from '../Page/Page'
+import style from './First.module.css'
 
 /* const First = () => {
     return (
@@ -36,6 +38,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 export default First; */
 
+/*
 export default class First extends Component {
 
     constructor(props) {
@@ -57,15 +60,38 @@ export default class First extends Component {
     render() {
         const {name, gender, level, points} = this.state;
         return (
-            <Router>
+            /* <Router>
+                <Routes>
+                    <Route path="/page1" element={<Page/>}/>
+                    <Route path="/page2" element={<Page/>}/>
+                </Routes>
+            </Router> 
+            
+            
                <div className='first-page'>
                 <button onClick={this.upCount}>+</button>
                 <h3>Name: {name}</h3>
                 <h3>Level: {level}</h3>
                 <a href='#'>{name}: {points}</a>
             </div> 
-            </Router>
-            
+           
         )
     }
 }
+*/
+
+function First() {
+    const [count, setCount] = useState(0);
+
+    return(
+    <div className={style.page}>
+        <p>Вы кликнули {count} раз</p>
+        <button
+        onClick={()=>setCount(count+1)}>+</button>
+    </div>
+)
+}
+
+
+
+export default First;

@@ -9,25 +9,35 @@ import Header from './components/Header/Header';
 import Preview from './components/Preview/Preview';
 import First from './components/first/First';
 
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    /*<EditorProvider>
-        <Codebar />
+    <EditorProvider>
+      <Router>
+        <Routes>
+          <Route path="/code" element={<Codebar />}/>
+          <Route path="/code" element={ 
+          <div className={styles.main}>
+            <Header/>
+            <Preview/>
+          </div>}/>
 
-        <div className={styles.main}>
-          <Header/>
-          <Preview/>
-        </div>
-        
-    </EditorProvider>*/
-    <div>
-      <First name="Alex"/>
-      <First name="Gerold"/>
-      <First name="Richard"/>
-    </div>
-    
+          <Route path="/main" element={<First/>}/>
+        </Routes>
+      </Router>
+    </EditorProvider>
+       
+            
+          /*  <First/>
+     <div>
+            <Router>
+                <Routes>
+                    <Route path="/page1" element={<First/>}/>
+                    <Route path="/page2" element={<Header/>}/>
+                </Routes>
+            </Router>
+        </div>*/
   );
 
 }
