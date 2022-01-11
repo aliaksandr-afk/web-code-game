@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import styles from './App.module.css'
+import style from './App.module.css'
 import React from 'react';
 import {
   EditorProvider
@@ -8,11 +8,28 @@ import Codebar from './components/CodeBar/CodeBar';
 import Header from './components/Header/Header';
 import Preview from './components/Preview/Preview';
 import First from './components/first/First';
+import Sidebar from './components/Sidebar/Sidebar';
+import Layout from './components/Layout/Layout';
+import Profile from './components/Profile/Profile';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
+        <Router>
+          <div className={style.main}>
+            <Sidebar/>
+
+          </div>
+          <Routes>
+            <Route path="/profile" element={<Profile />}/>
+            <Route path="/game" element={<Layout />}/>
+            <Route path="/info" element={<Sidebar />}/>
+          </Routes>
+        </Router>
+
+
+    /*  
     <EditorProvider>
       <Codebar/>
       
@@ -25,7 +42,7 @@ function App() {
     </EditorProvider>
        
             
-          /*  
+          
           <Router>
         <Routes>
           <Route path="/code" element={<Codebar />}/>
