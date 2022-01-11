@@ -14,9 +14,6 @@ export default function Sidebar() {
                 <div className={style.item}>
                     <NavLink to="/game">Game</NavLink>
                 </div>
-                <div className={style.item}>
-                    <NavLink to="/info">Info</NavLink>
-                </div>
             </nav>
         </div>
     )

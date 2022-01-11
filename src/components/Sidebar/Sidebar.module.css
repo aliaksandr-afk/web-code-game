@@ -6,11 +6,17 @@
     background-color: #1b2b37;
     color: #4d7fa5;
 }
+.item a {
+    color: #4d7fa5;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
 
 .nav {
 
 }
 
-.item {
+.item a.active {
     
 }

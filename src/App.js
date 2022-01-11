@@ -24,7 +24,6 @@ function App() {
           <Routes>
             <Route path="/profile" element={<Profile />}/>
             <Route path="/game" element={<Layout />}/>
-            <Route path="/info" element={<Sidebar />}/>
           </Routes>
         </Router>
 
