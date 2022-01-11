@@ -14,7 +14,19 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <EditorProvider>
-      <Router>
+      <Codebar/>
+      
+          <div className={styles.main}>
+            <Header/>
+            <Preview/>
+          </div>
+
+      
+    </EditorProvider>
+       
+            
+          /*  
+          <Router>
         <Routes>
           <Route path="/code" element={<Codebar />}/>
           <Route path="/code" element={ 
@@ -26,10 +38,10 @@ function App() {
           <Route path="/main" element={<First/>}/>
         </Routes>
       </Router>
-    </EditorProvider>
-       
-            
-          /*  <First/>
+          
+          
+          
+          <First/>
      <div>
             <Router>
                 <Routes>
