@@ -1,12 +1,14 @@
 import React from 'react';
 import { Component } from 'react';
-import styles from './Page.module.css'
+import style from './Page.module.css'
+
+import { NavLink } from 'react-router-dom';
 
 export default function Page() {
 
     return (
         <div className="first">
-            HEllo
+            Page not found
         </div>
     )
 }

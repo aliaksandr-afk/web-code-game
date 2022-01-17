@@ -13,6 +13,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 export default function Sidebar_courses() {
 
     return (
+        
         <div className={style.sidebar_courses}>
             <nav className={style.sidebar_courses_nav}>
                 <div className={style.sidebar_courses_item}>

@@ -17,13 +17,10 @@ export default function Sidebar() {
                 <div className={style.item}>
                     <NavLink to="/game">Game</NavLink>
                 </div>
-                <div className={style.sidebar_courses_item}>
-                    <NavLink to="/game/1">Page 1</NavLink>
-                </div>
             </nav>
 
             <Routes>
-                <Route path="/game" element={<Sidebar_courses />}/>
+                <Route path="/game/*" element={<Sidebar_courses />}/>
             </Routes>
         </div>
     )
