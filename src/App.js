@@ -19,7 +19,7 @@ function App() {
         <Router>
           <div className={style.main}>
             <Sidebar/>
-
+            <Layout/>
           </div>
           <Routes>
             <Route path="/profile" element={<Profile />}/>

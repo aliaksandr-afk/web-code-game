@@ -7,7 +7,7 @@ export default function Header() {
     const [camera, setCamera] = useState(true)
 
     return (
-        <header className={styles.header}>
+        <header className={styles.layout__header}>
             <button
             onClick={()=> setCamera(!camera)}
             className={styles.button}>
