@@ -1,6 +1,7 @@
 .layout {
     display: flex;
     border: 1px solid magenta;
+    flex-direction: column;
     width: 80vw;
     height: 100vh;
     background-color: #16252e;

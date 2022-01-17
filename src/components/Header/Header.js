@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { BsFillCameraVideoFill, BsFillCameraVideoOffFill } from 'react-icons/bs'
 import styles from './Header.module.css'
+import Me from '../Me/Me.js'
 
 export default function Header() {
 
@@ -8,13 +9,10 @@ export default function Header() {
 
     return (
         <header className={styles.layout__header}>
-            <button
-            onClick={()=> setCamera(!camera)}
-            className={styles.button}>
-                {camera ? 
-                <BsFillCameraVideoFill fill='#fff' size={23}/> 
-                : <BsFillCameraVideoOffFill fill='#fff' size={23}/>}
-            </button>
+            Course name
+            <div className={styles.me}>
+                <Me/>
+            </div>
             
         </header>
     )

@@ -21,10 +21,6 @@ function App() {
             <Sidebar/>
             <Layout/>
           </div>
-          <Routes>
-            <Route path="/profile" element={<Profile />}/>
-            <Route path="/game" element={<Layout />}/>
-          </Routes>
         </Router>
 
 

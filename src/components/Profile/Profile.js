@@ -7,7 +7,7 @@ export default function Profile() {
 
     return(
     <div className={style.profile}>
-        <p>Вы кликнули {count} раз</p>
+        Вы кликнули {count} раз
         <button
         onClick={()=>setCount(count+1)}>+</button>
     </div>
