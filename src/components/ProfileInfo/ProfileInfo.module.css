@@ -1,0 +1,14 @@
+.profileInfo {
+    display: flex;
+    border: 1px solid rgb(0, 255, 115);
+    width: 400px;
+    background-color: #16252e;
+    color: rgb(255, 255, 255);
+}
+
+.profileInfo__img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-size: auto;
+}

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { BsFillCameraVideoFill, BsFillCameraVideoOffFill } from 'react-icons/bs'
 import styles from './Header.module.css'
-import Me from '../Me/Me.js'
+import ProfileInfo from '../ProfileInfo/ProfileInfo'
 
 export default function Header() {
 
@@ -11,7 +11,7 @@ export default function Header() {
         <header className={styles.layout__header}>
             Course name
             <div className={styles.me}>
-                <Me/>
+                <ProfileInfo name="ALeks" lastName="Novik" level="4" coins="10"/>
             </div>
             
         </header>
