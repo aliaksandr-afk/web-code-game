@@ -5,3 +5,9 @@
     height: 10vh;
     justify-content: space-between;
 }
+
+.header__name {
+    font-size: 24px;
+    font-weight: 900;
+    padding: 12px;
+}

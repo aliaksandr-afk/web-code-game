@@ -6,7 +6,7 @@ import Sidebar_courses from '../Sidebar_courses/Sidebar_courses';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-export default function Sidebar() {
+export default function Sidebar(props) {
 
     return (
         <div className={style.sidebar}>
@@ -20,7 +20,7 @@ export default function Sidebar() {
             </nav>
 
             <Routes>
-                <Route path="/game/*" element={<Sidebar_courses />}/>
+                <Route path="/game/*" element={<Sidebar_courses courses={props.courses}/>}/>
             </Routes>
         </div>
     )

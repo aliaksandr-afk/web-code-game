@@ -4,21 +4,23 @@ import React from 'react';
 import {
   EditorProvider
 } from './context/context';
-import Codebar from './components/CodeBar/CodeBar';
-import Header from './components/Header/Header';
-import Preview from './components/Preview/Preview';
-import First from './components/first/First';
 import Sidebar from './components/Sidebar/Sidebar';
 import Layout from './components/Layout/Layout';
-import Profile from './components/Profile/Profile';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
+
+  let courses = [
+    {id: 1, name: "JS", pages: 12},
+    {id: 2, name: "HTML", pages: 10},
+    {id: 3, name: "CSS", pages: 5}
+  ];
+
   return (
         <Router>
           <div className={style.main}>
-            <Sidebar/>
+            <Sidebar courses={courses}/>
             <Layout/>
           </div>
         </Router>

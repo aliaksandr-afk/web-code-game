@@ -1,4 +1,4 @@
-.sidebar_courses{
+.sidebar_courses_sidebar_courses{
     display: flex;
     border: 1px solid magenta;
     flex-direction: column;
@@ -6,4 +6,29 @@
     height: 100vh;
     background-color: #16252e;
     color: rgb(255, 255, 255);
+}
+
+.sidebar_courses_item{
+    display: flex;
+}
+
+.sidebar_courses_item a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 8px;
+    margin: 4px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+}
+
+.sidebar_courses_item a:hover{
+    color:#69d1d8;
+    font-size: 22px;
+    border-bottom: 1px solid rgb(94, 164, 243);
+}
+
+.sidebar_courses_item a:active{
+    font-size: 26px;
+    border-bottom: 1px solid rgb(94, 164, 243);
 }
