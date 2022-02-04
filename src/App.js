@@ -9,19 +9,15 @@ import Layout from './components/Layout/Layout';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-function App() {
+import state from './redux/state';
 
-  let courses = [
-    {id: 1, name: "JS", pages: 12},
-    {id: 2, name: "HTML", pages: 10},
-    {id: 3, name: "CSS", pages: 5}
-  ];
+function App() {
 
   return (
         <Router>
           <div className={style.main}>
             <Sidebar courses={courses}/>
-            <Layout/>
+            <Layout courses={courses} users={users} courseContent={courseContent}/>
           </div>
         </Router>
 

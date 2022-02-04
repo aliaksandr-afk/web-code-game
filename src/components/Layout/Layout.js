@@ -1,31 +1,51 @@
 import React from 'react';
 import { Component } from 'react';
 import styles from './Layout.module.css'
-import Header from '../Header/Header.js'
-import ProfileInfo from '../ProfileInfo/ProfileInfo';
-import Page from '../Page/Page';
+import Header from './Header/Header.js'
+import ProfileInfo from './Header/ProfileInfo/ProfileInfo';
+import Page from './Page/Page';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-export default function Layout() {
+export default function Layout(props) {
 
-    let courseContent = [
-        {id: 1, name: "JS", content: "Квест JavaScript усвоит даже тот, кто никогда не программировал. Вы узнаете, что такое классы, объекты, методы, переменные, типы данных, массивы, условные операторы и циклы. Глянете одним глазком на коллекции и ООП, а также начнете работать в среде Visual Studio Code, которой пользуются программисты во всем мире!",
-        page: 1},
-        {id: 1, name: "HTML", content: "HTML", page: 1},
-        {id: 1, name: "CSS", content: "CSS", page: 1}
-    ]
+    let courseContent = props.courseContent
+
+    let coursesNames = courseContent.map((course) => {
+        return (
+            <div className={styles.layout}>
+                <Header courseName={course.name}/>
+            </div>
+        )
+    })
+        let users = props.users
+
+    let cousresUsers = courseContent.map((users) => {
+        return (
+                <Route path="/profile" element={<ProfileInfo users={users}/>}/>
+        )
+    })
+
+    let courses = props.courses
+
+    let cousresData = courseContent.map((courses) => {
+        return (
+            <Route path={`/game/${courses.name}`} element={<Page content={courseContent}/>}/>
+        )
+    })
+
 
     return (
         <div className={styles.layout}>
             <Header courseName={courseContent[0].name}/>
+            {/* {coursesNames} */}
 
             <Routes>
                 <Route path="/profile" element={<ProfileInfo name="Kirill" lastName="Novik" level="4" coins="10"/>}/>
-                <Route path="/game/JS" element={<Page content={courseContent}/>}/>
+                {/* {cousresUsers} */}
+                {/* {cousresData} */}
+                <Route path={`/game/${props.courses[0].name}`} element={<Page content={courseContent}/>}/>
             </Routes>
-            
-            
         </div>
     )
 }

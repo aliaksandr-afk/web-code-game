@@ -6,7 +6,7 @@ export default function ProfileInfo(props) {
     return(
         <div className={style.profileInfo}>
             <div className={style.profileInfo__avatar}>
-                <img className={style.profileInfo__img} src='https://static.planetminecraft.com/files/resource_media/screenshot/1233/untitled2_3310847.jpg'></img>
+                <img className={style.profileInfo__img} src='https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/img/minecraft-creeper-face.jpg'></img>
             </div>
             <p>Name: {props.name}</p>
             <p>LastName: {props.lastName}</p>

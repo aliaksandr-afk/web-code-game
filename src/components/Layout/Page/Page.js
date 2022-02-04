@@ -14,6 +14,9 @@ export default function Page(props) {
             <div className={style.pageNumber}>
             {props.content[0].page}
             </div>
+            <div className={style.page__avatar}>
+                <img className={style.page__img} src='https://ixbt.online/live/topics/preview/00/02/17/83/dbc99bcb19.jpg'></img>
+            </div>
         </div>
     )
 }

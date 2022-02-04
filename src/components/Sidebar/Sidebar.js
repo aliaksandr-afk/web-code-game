@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './Sidebar.module.css'
-import Sidebar_courses from '../Sidebar_courses/Sidebar_courses';
+import Sidebar_courses from './Sidebar_courses/Sidebar_courses.js';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -16,6 +16,9 @@ export default function Sidebar(props) {
                 </div>
                 <div className={style.item}>
                     <NavLink to="/game">Game</NavLink>
+                </div>
+                <div className={style.item}>
+                    <NavLink to="/code">Code</NavLink>
                 </div>
             </nav>
 

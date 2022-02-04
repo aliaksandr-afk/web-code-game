@@ -1,3 +1,7 @@
 .pageNumber {
     padding-left: 90%;
 }
+
+.page__avatar {
+    height: 100%;
+}
