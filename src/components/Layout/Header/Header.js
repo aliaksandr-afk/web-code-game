@@ -6,7 +6,7 @@ export default function Header(props) {
 
     return (
         <header className={styles.layout__header}>
-                <p className={styles.header__name}>Minecraft_Code</p>
+                <p className={styles.header__name}>Code_game</p>
                 <div className={styles.header__name}>
                     {props.courseName}
                 </div>

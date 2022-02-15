@@ -6,6 +6,7 @@ import style from './Sidebar_courses.module.css'
 
 export default function Sidebar_courses(props) {
 
+    console.log(props)
     return (
         
         <div className={style.sidebar_courses}>

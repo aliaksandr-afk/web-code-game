@@ -23,7 +23,7 @@ export default function Sidebar(props) {
             </nav>
 
             <Routes>
-                <Route path="/game/*" element={<Sidebar_courses courses={props.courses}/>}/>
+                <Route path="/game/*" element={<Sidebar_courses courses={props.courseData.courses}/>}/>
             </Routes>
         </div>
     )

@@ -7,8 +7,9 @@
 }
 
 .profileInfo__img {
-    border-radius: 50%;
+    border: 1px solid blue;
     width: 60px;
     height: 60px;
     background-size: auto;
+    background-color: aqua;
 }

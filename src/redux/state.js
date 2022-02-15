@@ -1,6 +1,7 @@
+import { renderEntireThree } from "../render";
+
 let state = {
-    
-    coursesData: {
+    courseData: {
         courses: [
             {id: 1, name: "JS", pages: 12},
             {id: 2, name: "HTML", pages: 10},
@@ -20,5 +21,16 @@ let state = {
         {name: "Stas", lastName: "Koval", level: "6", coins: "14"}
       ],    
 }
+
+export let addPost = (postMessage) => {
+  let newPost = {
+    id: 5,
+    name: postMessage,
+    pages: 0
+  };
+
+  state.courseData.courses.push(newPost);
+  renderEntireThree();
+};
 
 export default state;

@@ -5,3 +5,11 @@
 .page__avatar {
     height: 100%;
 }
+
+.page__img {
+    background-color: aquamarine;
+}
+
+.page__content {
+    border: 1px solid gray;
+}

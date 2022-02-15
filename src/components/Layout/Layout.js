@@ -9,8 +9,9 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 export default function Layout(props) {
 
-    let courseContent = props.courseContent
-
+    console.log(props)
+    let courseContent = props.courseData.courseContent
+ 
     let coursesNames = courseContent.map((course) => {
         return (
             <div className={styles.layout}>
@@ -26,7 +27,7 @@ export default function Layout(props) {
         )
     })
 
-    let courses = props.courses
+    let courses = props.courseData.courses
 
     let cousresData = courseContent.map((courses) => {
         return (
@@ -44,7 +45,7 @@ export default function Layout(props) {
                 <Route path="/profile" element={<ProfileInfo name="Kirill" lastName="Novik" level="4" coins="10"/>}/>
                 {/* {cousresUsers} */}
                 {/* {cousresData} */}
-                <Route path={`/game/${props.courses[0].name}`} element={<Page content={courseContent}/>}/>
+                <Route path={`/game/${courses[0].name}`} element={<Page courseData={props.courseData} addPost={props.addPost}/>}/>
             </Routes>
         </div>
     )
